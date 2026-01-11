@@ -3,216 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>120 Sucos Detox + Bônus Exclusivo</title>
-
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '833950889336655');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=833950889336655&ev=PageView&noscript=1"
-    /></noscript>
+    <title>Protocolo de Emergência - Carnaval</title>
     <style>
-        /* RESET E ESTILO BÁSICO (FOCADO EM MOBILE) */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-        body { background-color: #f0f2f5; color: #1c1e21; line-height: 1.4; }
+        /* ESTILO GERAL - BLACK E URGENTE */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        body { background-color: #050505; color: #ffffff; line-height: 1.6; }
         
-        /* CONTAINER CENTRAL MAIS APERTADO */
-        .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 15px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        /* CONTAINER CENTRALIZADO (Focado no Mobile) */
+        .container { max-width: 500px; margin: 0 auto; padding: 20px; background: #0a0a0a; border-left: 1px solid #222; border-right: 1px solid #222; }
 
-        /* HEADLINES COMPACTAS */
-        .headline { font-size: 22px; font-weight: 800; color: #cc0000; text-align: center; margin-bottom: 8px; line-height: 1.1; text-transform: uppercase; }
-        .subheadline { font-size: 15px; color: #555; text-align: center; margin-bottom: 15px; font-weight: 500; }
+        /* BARRA DE ALERTA NO TOPO */
+        .alert-bar {
+            background: #d60000; /* Vermelho Sangue */
+            color: #fff;
+            text-align: center;
+            padding: 12px;
+            font-weight: 800;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: piscar 1s infinite alternate;
+        }
+        @keyframes piscar { 0% {background: #d60000;} 100% {background: #ff3333;} }
 
-        /* VIDEO BOX / IMAGEM */
-        .video-box { 
-            width: 100%; 
-            height: 220px; 
-            background: #000; 
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            margin-bottom: 20px;
-            border-radius: 8px;
+        /* HEADLINE (TÍTULO) */
+        .headline { 
+            font-size: 28px; 
+            font-weight: 900; 
+            color: #ffffff; 
+            text-align: center; 
+            margin: 25px 0; 
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+        .highlight { color: #00ff00; background: rgba(0,255,0,0.1); padding: 2px 5px; border-radius: 4px;} /* Verde Neon */
+        .red-text { color: #ff2222; font-weight: bold; }
+
+        /* IMAGEM DO PRODUTO/RESULTADO */
+        .hero-img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 3px solid #222;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
         }
 
-        /* TEXTO DO CORPO MAIS DINÂMICO */
-        p { margin-bottom: 10px; font-size: 17px; text-align: left; color: #333; }
-        .highlight { background-color: #ffff00; font-weight: bold; padding: 2px 5px; }
+        /* COPY (TEXTO DE VENDAS) */
+        .copy-text { font-size: 19px; color: #dcdcdc; text-align: left; margin-bottom: 18px; }
+        .copy-text strong { color: #fff; font-weight: 800; }
 
-        /* LISTA MAIS APERTADA */
-        ul { margin: 15px 0; padding-left: 20px; }
-        li { margin-bottom: 8px; font-size: 16px; }
+        /* BOX DE DESTAQUE (O Segredo) */
+        .secret-box {
+            background: #111;
+            border-left: 5px solid #00ff00;
+            padding: 20px;
+            margin: 25px 0;
+            font-size: 18px;
+            font-style: italic;
+            color: #eee;
+            border-radius: 0 10px 10px 0;
+        }
 
-        /* OFERTA BOX COMPACTA */
-        .offer-box { background: #fffbe6; border: 2px dashed #e6c300; padding: 15px; text-align: center; margin: 20px 0; border-radius: 12px; }
-        .old-price { text-decoration: line-through; color: #999; font-size: 14px; }
-        .new-price { color: #27ae60; font-size: 34px; font-weight: 900; line-height: 1; }
-        
-        .cta-button {
+        /* LISTA DE BENEFÍCIOS (O COMBO) */
+        .benefits-list {
+            text-align: left;
+            margin: 30px 0;
+            background: #151515;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #333;
+        }
+        .benefits-list h2 { color: #fff; text-align: center; margin-bottom: 20px; text-transform: uppercase; font-size: 22px;}
+        .benefits-list ul { list-style: none; }
+        .benefits-list li { margin-bottom: 15px; font-size: 18px; color: #ddd; display: flex; align-items: center;}
+        .checkmark { color: #00ff00; margin-right: 10px; font-size: 22px; }
+
+        /* BOX DE OFERTA (PREÇO E BOTÃO) */
+        .offer-box {
+            background: linear-gradient(145deg, #222, #000);
+            border: 2px solid #333;
+            padding: 35px 20px;
+            text-align: center;
+            border-radius: 20px;
+            margin-top: 30px;
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.1);
+        }
+        .offer-tag { background: #00ff00; color: #000; display: inline-block; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 14px; margin-bottom: 15px; }
+        .price-old { text-decoration: line-through; color: #888; font-size: 18px; }
+        .price-new { font-size: 48px; font-weight: 900; color: #00ff00; margin: 5px 0 20px 0; text-shadow: 0 0 10px rgba(0,255,0,0.3); }
+
+        /* BOTÃO PULSANTE (CTA) */
+        .btn-pulse {
+            background: linear-gradient(to bottom, #00c900, #009600);
+            color: white;
+            padding: 22px 15px;
+            font-size: 20px;
+            font-weight: 900;
+            text-decoration: none;
+            border-radius: 12px;
             display: block;
             width: 100%;
-            background: linear-gradient(to bottom, #2ecc71, #27ae60);
-            color: #fff;
-            padding: 16px; 
-            text-align: center;
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            box-shadow: 0 4px 0 #1e8449;
-            margin-top: 12px;
-            animation: pulse 2s infinite;
+            text-transform: uppercase;
+            box-shadow: 0 5px 20px rgba(0, 200, 0, 0.4);
+            animation: pulse 1.2s infinite;
+            border-bottom: 4px solid #006400;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
-        .cta-button:active { transform: translateY(4px); box-shadow: none; }
-
-        /* AVISOS DE SEGURANÇA */
-        .security-text { 
-            margin-top: 12px; 
-            font-size: 12px; 
-            color: #666; 
-            background-color: #f5f5f5; 
-            padding: 8px; 
-            border-radius: 6px;
-            display: inline-block;
-            width: 100%;
-        }
-
-        /* COMENTÁRIOS COMPACTOS */
-        .comments-section { margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px; }
-        .fb-comment { display: flex; margin-bottom: 12px; }
-        .avatar { width: 40px; height: 40px; background: #ddd; border-radius: 50%; margin-right: 8px; flex-shrink: 0; overflow: hidden; } 
-        .avatar img { width: 100%; height: 100%; object-fit: cover; }
-        .comment-body { background: #f0f2f5; padding: 8px 12px; border-radius: 15px; font-size: 13px; } 
-        .name { font-weight: bold; color: #365899; font-size: 13px; }
-        .time { font-size: 11px; color: #999; margin-left: 8px; }
-        .likes { color: #365899; font-size: 11px; margin-top: 4px; cursor: pointer; }
-
-        /* FOOTER */
-        footer { text-align: center; font-size: 11px; color: #aaa; margin-top: 30px; padding-bottom: 20px; }
-        
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.02); }
+            50% { transform: scale(1.03); }
             100% { transform: scale(1); }
         }
+        .garantia-selo { display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 20px; color: #aaa; font-size: 14px; }
+        .garantia-selo img { height: 30px; }
+
+        /* PROVA SOCIAL (COMENTÁRIOS FAKE) */
+        .comments-section { background: #fff; color: #222; padding: 25px; margin-top: 50px; border-radius: 12px; }
+        .fb-header { font-weight: bold; font-size: 16px; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px; color: #444;}
+        .comment { display: flex; margin-bottom: 20px; }
+        .avatar { width: 45px; height: 45px; background: #ddd; border-radius: 50%; margin-right: 12px; border: 2px solid #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+        .comment-body { background: #f0f2f5; padding: 12px 15px; border-radius: 18px; flex: 1; text-align: left; }
+        .name { font-weight: bold; color: #385898; font-size: 14px; }
+        .text { font-size: 15px; margin-top: 5px; line-height: 1.4; }
+        .meta { font-size: 12px; color: #65676b; margin-top: 8px; font-weight: 500;}
+        .likes { color: #385898; }
+
+        /* RODAPÉ E DISCLAIMER (ANTI-BAN) */
+        footer { text-align: center; font-size: 12px; color: #666; margin-top: 50px; padding-bottom: 30px; border-top: 1px solid #222; padding-top: 30px;}
+        .disclaimer { font-size: 11px; color: #555; margin: 20px auto; max-width: 90%; line-height: 1.5; }
     </style>
 </head>
 <body>
 
-    <div style="background: #cc0000; color: #fff; text-align: center; padding: 8px; font-size: 13px; font-weight: bold;">
-        🔥 ÚLTIMAS 4 UNIDADES COM DESCONTO
+    <div class="alert-bar">
+        ⚠️ SOS CARNAVAL: O plano de emergência para desinchar em 7 dias! (Vagas Limitadas)
     </div>
 
     <div class="container">
         
-        <h1 class="headline">O Fim do Inchaço: Como 1 Copo Disso Por Dia Pode "Sugar" a Gordura da Barriga</h1>
-        <p class="subheadline">Nunca mais repita o mesmo suco ruim. Descubra os sabores que emagrecem.</p>
+        <h1 class="headline">
+            O "Protocolo de Emergência" que <span class="highlight">Seca a Barriga em 7 Dias</span> (A tempo do Carnaval!)
+        </h1>
 
-        <a href="https://pay.kiwify.com.br/JBNa0U3" style="text-decoration: none;">
-            <div class="video-box">
-                
-                <div style="position: absolute; width: 100%; height: 100%; background: url('suco.png') center/cover;"></div>
-                
-            </div>
-        </a>
+        <img src="https://placehold.co/600x350/111/00ff00?text=IMAGEM+DO+SUCO+AQUI" alt="Resultado do Protocolo" class="hero-img">
 
-        <p>Cansou de começar a dieta na segunda e parar na quarta comendo ovo e salada?</p>
-        
-        <p>O segredo das famosas <strong>não é passar fome.</strong></p>
-        
-        <p>É saber misturar os ingredientes certos para ativar o <span class="highlight">Modo Queima de Gordura</span> natural do corpo.</p>
-        
-        <p>Apresentamos o guia definitivo: <strong>120 Sucos Detox Exterminadores de Gordura.</strong></p>
+        <p class="copy-text">
+            Falta pouco para o Carnaval e você ainda sente que a roupa está apertando e a barriga estufada?
+        </p>
+        <p class="copy-text">
+            A culpa <strong>NÃO É SUA</strong>. Você provavelmente está sofrendo com um "Travamento Metabólico" causado por toxinas no intestino.
+        </p>
+        <p class="copy-text">
+            É como tentar limpar uma casa com o ralo entupido. Não adianta fazer dieta se a sujeira não sai.
+        </p>
 
-        <ul style="margin-top: 10px; margin-bottom: 10px;">
-            <li>✅ Prontos em 2 minutos.</li>
-            <li>✅ Ingredientes baratos de feira.</li>
-            <li>✅ Sabores deliciosos (adeus suco amargo).</li>
-        </ul>
+        <div class="secret-box">
+            "Descobrimos a combinação exata de 3 ingredientes baratos da feira que agem como uma 'vassoura hidráulica' no seu organismo, destravando a queima de gordura em 24 horas."
+        </div>
+
+        <p class="copy-text">
+            Não precisa passar fome e nem se matar na academia faltando uma semana para a folia.
+        </p>
+        <p class="copy-text">
+            Nós preparamos o <strong>Combo Definitivo</strong> com absolutamente tudo que você precisa para chegar no Carnaval desinchada e leve.
+        </p>
+        
+        <div class="benefits-list">
+            <h2>📦 O Que Você Recebe Hoje:</h2>
+            <ul>
+                <li><span class="checkmark">✅</span> <strong>120 Receitas de Sucos Detox</strong> (O maior acervo do Brasil para nunca enjoar);</li>
+                <li><span class="checkmark">✅</span> <strong>10 Jantares Low Carb</strong> ("Mata-fome" deliciosos para queimar dormindo);</li>
+                <li><span class="checkmark">✅</span> <strong>5 Vitaminas Turbo</strong> (Ativadores metabólicos para suas manhãs);</li>
+                <li><span class="checkmark">✅</span> <strong>BÔNUS:</strong> Cronograma Exato de 7 Dias para o Carnaval.</li>
+            </ul>
+        </div>
 
         <div class="offer-box">
-            <p style="font-weight: bold; margin-bottom: 5px; font-size: 16px;">VOCÊ VAI RECEBER:</p>
-            <div style="text-align: left; margin-bottom: 10px; font-size: 14px; padding: 0 5px;">
-                📚 <strong>E-book:</strong> 120 Receitas de Sucos Detox<br>
-                🎁 <strong>BÔNUS 1:</strong> 10 Jantares Low Carb<br>
-                  🎁 <strong>BÔNUS 2:</strong> 5 Vitaminas "Turbo" para acelerar seu metabolismo e ter energia o dia todo)<br>
-                🎁 <strong>BÔNUS 3:</strong> Acesso liberado à nossa COMUNIDADE SECRETA DE RESULTADOS. Veja fotos reais, troque receitas de feira e participe do nosso Desafio Semanal junto com outras 300 mulheres.<br>
-            </div>
-
-            <div class="old-price">De R$ 97,00</div>
-            <div class="new-price">Por R$ 19,90</div>
+            <div class="offer-tag">⚡ PROMOÇÃO RELÂMPAGO DE CARNAVAL</div>
+            <p style="color: #ccc; font-size: 16px; margin-top: 15px;">Leve o Combo Completo (Valor Real R$ 135,00)</p>
+            <p class="price-old">De R$ 97,00 por apenas:</p>
+            <p class="price-new">R$ 19,90</p> <a href="SEU_LINK_DA_KIRVANO_AQUI" class="btn-pulse">
+                SIM! QUERO DESINCHAR PARA O CARNAVAL ➤
+            </a>
             
-            <a href="https://pay.kiwify.com.br/JBNa0U3" class="cta-button">QUERO DESINCHAR AGORA 👉</a>
-            
-            <div class="security-text">
-                📧 <strong>Acesso Imediato no seu E-mail</strong><br>
-                🔒 Risco Zero: Teste por 7 dias.
+            <div class="garantia-selo">
+                <span>🔒 Compra Segura</span> | <span>🛡️ Garantia de 7 Dias</span>
             </div>
+            <p style="font-size: 12px; color: #777; margin-top: 15px;">Acesso imediato enviado para seu e-mail.</p>
         </div>
 
         <div class="comments-section">
-            <h3 style="margin-bottom: 15px; font-size: 18px;">Quem comprou, amou:</h3>
+            <div class="fb-header">Comentários Recentes (4 de 213)</div>
 
-            <div class="fb-comment">
-                <div class="avatar"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto"></div>
-                <div>
-                    <div class="comment-body">
-                        <div class="name">Fernanda Lima</div>
-                       Nunca imaginei que por 19 reais ia ter tanto resultado. Minha calça jeans agradece! kkkk 🙏
-                    </div>
-                    <div class="likes">Curtir · Responder · 7 min</div>
+            <div class="comment">
+                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Foto" class="avatar">
+                <div class="comment-body">
+                    <div class="name">Júlia Menezes</div>
+                    <div class="text">Gente, eu tava desesperada pq meu short do ano passado não fechava. Comecei o cronograma na segunda, hoje é quinta e já fechou folgado! O suco 7 é milagroso.</div>
+                    <div class="meta">Curtir · Responder · <span class="likes">👍 24</span> · 12 min</div>
                 </div>
             </div>
 
-            <div class="fb-comment">
-                <div class="avatar"><img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Foto"></div>
-                <div>
-                    <div class="comment-body">
-                        <div class="name">Cláudia Martins</div>
-                        O material é muito bem feito e os sucos são deliciosos, as vitaminas são maravilhosas. Amei.
-                    </div>
-                    <div class="likes">Curtir · Responder · 12 min</div>
+            <div class="comment">
+                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Foto" class="avatar">
+                <div class="comment-body">
+                    <div class="name">Ana Paula Souza</div>
+                    <div class="text">Pelo amor de Deus, são 120 receitas mesmo? Achei que era mentira pelo preço kkkk. Comprei agora e chegou tudo, tô chocada com a quantidade de coisa. Amei os jantares.</div>
+                    <div class="meta">Curtir · Responder · <span class="likes">👍 11</span> · 45 min</div>
                 </div>
             </div>
 
-             <div class="fb-comment">
-                <div class="avatar"><img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Foto"></div>
-                <div>
-                    <div class="comment-body">
-                        <div class="name">Patrícia Gomes</div>
-                        Gente, o suco nº 3 salva a vida! 😂 Desinchei muito rápido, tô me sentindo muito mais leve
-                    </div>
-                    <div class="likes">Curtir · Responder · 55 min</div>
+            <div class="comment">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Foto" class="avatar">
+                <div class="comment-body">
+                    <div class="name">Mariana Costa</div>
+                    <div class="text">Meu intestino parecia de pedra, vivia inchada. No segundo dia tomando a vitamina turbo eu fui no banheiro 3 vezes. Me sinto outra pessoa, muito mais leve. Valeu cada centavo.</div>
+                    <div class="meta">Curtir · Responder · <span class="likes">👍 35</span> · 2 h</div>
                 </div>
             </div>
-
         </div>
+
+        <footer>
+            <p>Copyright 2024 - Todos os direitos reservados.</p>
+            <p>Este site não faz parte do Facebook ou do Facebook Inc.</p>
+            
+            <div class="disclaimer">
+                Isenção de responsabilidade: Os resultados podem variar de pessoa para pessoa. Este produto não substitui o parecer médico profissional. Não prometemos cura de doenças ou perda de peso milagrosa sem esforço. O foco do protocolo é auxiliar na saúde digestiva, redução de inchaço e bem-estar geral através de receitas naturais.
+            </div>
+        </footer>
 
     </div>
 
-    <footer>
-        <p>Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook.</p>
-        <p>&copy; 2026 Essência Detox. Todos os direitos reservados.</p>
-        <p style="margin-top: 5px; font-size: 10px;">Pirataria é crime.</p>
-    </footer>
-
 </body>
-
 </html>
-
-
-
-
-
-
-
-
