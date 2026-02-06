@@ -23,7 +23,6 @@
         body { background-color: #050505; color: #ffffff; line-height: 1.6; }
         .container { max-width: 500px; margin: 0 auto; padding: 20px; background: #0a0a0a; border-left: 1px solid #222; border-right: 1px solid #222; }
 
-        /* POP-UP AJUSTADO (SEM TEXTO COLADO) */
         #viewing-now {
             position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
             background: rgba(0,0,0,0.9); color: white; padding: 10px 20px;
@@ -40,8 +39,14 @@
         .headline { font-size: 26px; font-weight: 900; color: #ffffff; text-align: center; margin: 25px 0; line-height: 1.2; text-transform: uppercase; }
         .highlight { color: #00ff00; background: rgba(0,255,0,0.1); padding: 2px 5px; border-radius: 4px;}
 
-        /* NUTRICIONISTA TAG */
-        .nutri-tag { background: #e63946; color: white; padding: 10px; border-radius: 8px; margin: 15px 0; font-size: 14px; text-align: center; border: 1px solid #ff4d4d; }
+        .hero-img { width: 100%; border-radius: 12px; margin-bottom: 20px; border: 2px solid #333; }
+
+        /* LISTA DE ENTREGÁVEIS */
+        .bundle-box { background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; margin: 20px 0; }
+        .bundle-item { display: flex; align-items: center; margin-bottom: 10px; font-size: 16px; }
+        .bundle-item span { color: #00ff00; margin-right: 10px; font-weight: bold; }
+
+        .nutri-tag { background: #e63946; color: white; padding: 10px; border-radius: 8px; margin: 15px 0; font-size: 14px; text-align: center; border: 1px solid #ff4d4d; font-weight: bold; }
 
         .wa-box { background: #075E54; border-radius: 15px; padding: 20px; margin: 20px 0; border: 2px solid #25D366; text-align: center; }
         .sorteio-badge { background: #ffcc00; color: #000; font-weight: 900; padding: 5px 10px; border-radius: 5px; margin: 10px 0; display: inline-block; }
@@ -53,61 +58,63 @@
         @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.03); } 100% { transform: scale(1); } }
 
         .comments-section { background: #fff; color: #222; padding: 20px; margin-top: 40px; border-radius: 12px; }
-        .comment { display: flex; margin-bottom: 20px; padding-bottom: 10px; }
-        .reply { margin-left: 55px; margin-top: -10px; border-left: 2px solid #ddd; padding-left: 15px; margin-bottom: 20px; }
+        .comment { display: flex; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #f0f2f5; }
+        .reply { margin-left: 55px; margin-top: -15px; border-left: 2px solid #ddd; padding-left: 15px; margin-bottom: 20px; }
         .avatar { width: 45px; height: 45px; border-radius: 50%; margin-right: 12px; background: #eee; }
         .comment-body { flex: 1; }
         .name { font-weight: bold; color: #385898; font-size: 14px; }
         .text { font-size: 14px; margin-top: 4px; color: #1c1e21; }
         .meta { font-size: 11px; color: #65676b; margin-top: 8px; }
-
-        .hero-img { width: 100%; border-radius: 12px; margin-bottom: 20px; border: 2px solid #333; }
     </style>
 </head>
 <body>
 
     <div id="viewing-now">
         <span class="dot"></span>
-        <span id="viewer-count">42</span> &nbsp;pessoas vendo essa oferta agora
+        <span id="viewer-count">47</span> &nbsp;pessoas vendo essa oferta agora
     </div>
 
     <div class="alert-bar">
-        ⚠️ AGRESSIVO: -10KG EM 15 DIAS OU R$ 19,90 DE VOLTA!
+        ⚠️ -10KG EM 15 DIAS OU R$ 19,90 DE VOLTA!
     </div>
 
     <div class="container">
         
         <h1 class="headline">
-            O MÉTODO DE <span class="highlight">3 INGREDIENTES</span> QUE SECA A BARRIGA EM 10 MINUTOS POR DIA!
+            SEQUE A BARRIGA USANDO <span class="highlight">3 INGREDIENTES</span> DA SUA COZINHA!
         </h1>
 
         <img src="suco.png" alt="Protocolo Detox" class="hero-img">
 
-        <p style="text-align: left; font-size: 18px; margin-bottom: 20px; color: #ddd;">
-            Nada de dietas caras. Use apenas <strong>3 ingredientes simples</strong> que você já tem na fruteira da sua cozinha. O preparo leva menos de 10 minutos e o resultado começa em 24h.
-        </p>
+        <div class="bundle-box">
+            <p style="font-weight: bold; color: #00ff00; margin-bottom: 15px; text-align: center;">VOCÊ VAI RECEBER HOJE:</p>
+            <div class="bundle-item"><span>✓</span> Protocolo 3 Ingredientes (Foco 24h)</div>
+            <div class="bundle-item"><span>✓</span> 10 Jantares Low Carb (Queima Noturna)</div>
+            <div class="bundle-item"><span>✓</span> 5 Vitaminas Detox (Energia e Saciedade)</div>
+            <div class="bundle-item"><span>✓</span> Grupo VIP das Alunas</div>
+        </div>
 
         <div class="nutri-tag">
-            👩‍⚕️ <b>PRESENTE:</b> 1 Consulta Online (Coletiva) a cada 15 dias com a <b>Nutricionista Carol Mendes</b> para tirar dúvidas!
+            🎁 BÔNUS: Consulta Online com a Nutri Carol Mendes a cada 15 dias!
         </div>
 
         <div class="wa-box">
             <h3>🟢 GRUPO VIP + SORTEIO</h3>
             <div class="sorteio-badge">💰 R$ 100,00 TODA SEMANA</div>
-            <p>Sorteio via PIX para as alunas que baterem a meta da semana para ajudar na feira!</p>
+            <p style="font-size: 14px;">Sorteio via PIX para quem bater a meta de 15 dias!</p>
         </div>
 
         <div class="offer-box">
             <p style="text-decoration: line-through; color: #888; font-size: 16px;">De R$ 97,00 por apenas:</p>
             <p class="price-new">R$ 19,90</p>
-            <a href="https://pay.kirvano.com/23af3173-bce4-42f3-9d4d-75d2ce5bd983" class="btn-pulse">
-                QUERO DESINCHAR AGORA ➤
+            <a href="https://pay.kirvano.com/23af3173-bce4-42f3-9d4d-75d2ce5bd983" class="btn-pulse" onclick="fbq('track', 'InitiateCheckout');">
+                QUERO MEU ACESSO AGORA ➤
             </a>
             <p style="font-size: 12px; color: #666; margin-top: 15px;">Acesso imediato à Nutri Carol Mendes e ao Grupo.</p>
         </div>
 
         <div class="comments-section">
-            <p style="font-weight: bold; margin-bottom: 15px; color: #444; border-bottom: 1px solid #eee;">Depoimentos das Alunas</p>
+            <p style="font-weight: bold; margin-bottom: 20px; color: #444; border-bottom: 1px solid #eee;">Depoimentos (142)</p>
 
             <div class="comment">
                 <img src="https://randomuser.me/api/portraits/women/32.jpg" class="avatar">
@@ -130,11 +137,29 @@
             </div>
 
             <div class="comment">
-                <img src="https://randomuser.me/api/portraits/women/68.jpg" class="avatar">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" class="avatar">
                 <div class="comment-body">
-                    <div class="name">Camila Antunes</div>
-                    <div class="text">Gente, a Carol Mendes é maravilhosa. A live com ela ontem tirou todas as minhas dúvidas sobre o que comer no jantar. Melhor 20 reais que já gastei.</div>
-                    <div class="meta">Curtir · 3h</div>
+                    <div class="name">Mariana Silveira</div>
+                    <div class="text">Gente, as vitaminas são TUDO! Eu não tinha tempo de cozinhar, mas em 5 min tá pronto. Já se foram 3kg em 4 dias. Chocada!</div>
+                    <div class="meta">Curtir · 45 min</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <img src="https://randomuser.me/api/portraits/women/81.jpg" class="avatar">
+                <div class="comment-body">
+                    <div class="name">Adriana Costa</div>
+                    <div class="text">Os jantares low carb são uma delícia, meu marido até começou a comer comigo kkkk. O melhor investimento que fiz esse mês, e a Nutri Carol é super atenciosa no grupo.</div>
+                    <div class="meta">Curtir · 15 min</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <img src="https://randomuser.me/api/portraits/women/26.jpg" class="avatar">
+                <div class="comment-body">
+                    <div class="name">Patrícia L.</div>
+                    <div class="text">Acabei de comprar e já estou dentro do grupo do Zap! O material é bem organizado, as receitas de 3 ingredientes são muito fáceis.</div>
+                    <div class="meta">Curtir · Agora</div>
                 </div>
             </div>
         </div>
