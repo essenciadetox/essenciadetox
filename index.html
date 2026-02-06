@@ -41,7 +41,6 @@
 
         .hero-img { width: 100%; border-radius: 12px; margin-bottom: 20px; border: 2px solid #333; }
 
-        /* LISTA DE ENTREGÁVEIS */
         .bundle-box { background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; margin: 20px 0; }
         .bundle-item { display: flex; align-items: center; margin-bottom: 10px; font-size: 16px; }
         .bundle-item span { color: #00ff00; margin-right: 10px; font-weight: bold; }
@@ -57,14 +56,24 @@
         .btn-pulse { background: linear-gradient(to bottom, #00c900, #009600); color: white; padding: 22px 10px; font-size: 18px; font-weight: 900; text-decoration: none; border-radius: 12px; display: block; text-transform: uppercase; animation: pulse 1.2s infinite; border-bottom: 4px solid #006400; }
         @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.03); } 100% { transform: scale(1); } }
 
-        .comments-section { background: #fff; color: #222; padding: 20px; margin-top: 40px; border-radius: 12px; }
-        .comment { display: flex; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #f0f2f5; }
-        .reply { margin-left: 55px; margin-top: -15px; border-left: 2px solid #ddd; padding-left: 15px; margin-bottom: 20px; }
-        .avatar { width: 45px; height: 45px; border-radius: 50%; margin-right: 12px; background: #eee; }
-        .comment-body { flex: 1; }
-        .name { font-weight: bold; color: #385898; font-size: 14px; }
-        .text { font-size: 14px; margin-top: 4px; color: #1c1e21; }
-        .meta { font-size: 11px; color: #65676b; margin-top: 8px; }
+        /* NOVO LAYOUT COMENTÁRIOS 2026 */
+        .comments-section { background: #0f0f0f; color: #fff; padding: 20px; margin-top: 40px; border-radius: 12px; border: 1px solid #222; }
+        .comment-header { font-weight: bold; margin-bottom: 20px; color: #fff; border-bottom: 1px solid #222; padding-bottom: 10px; font-size: 16px; }
+        
+        .comment { display: flex; margin-bottom: 20px; }
+        .reply { margin-left: 55px; margin-top: -10px; border-left: 1px solid #333; padding-left: 15px; margin-bottom: 20px; }
+        
+        .avatar { width: 42px; height: 42px; border-radius: 50%; margin-right: 12px; border: 1px solid #333; }
+        .comment-content { background: #1a1a1a; padding: 12px 15px; border-radius: 18px; flex: 1; }
+        
+        .name { font-weight: bold; color: #ffffff; font-size: 14px; display: block; margin-bottom: 2px; }
+        .text { font-size: 14px; color: #e4e6eb; line-height: 1.4; }
+        
+        .meta { font-size: 12px; color: #b0b3b8; margin-top: 6px; font-weight: 600; padding-left: 5px; }
+        .meta span { cursor: pointer; margin-right: 12px; }
+        .meta span:hover { text-decoration: underline; }
+
+        footer { text-align: center; padding: 40px 10px; color: #666; font-size: 11px; }
     </style>
 </head>
 <body>
@@ -114,57 +123,76 @@
         </div>
 
         <div class="comments-section">
-            <p style="font-weight: bold; margin-bottom: 20px; color: #444; border-bottom: 1px solid #eee;">Depoimentos (142)</p>
+            <p class="comment-header">Depoimentos (144)</p>
 
             <div class="comment">
                 <img src="https://randomuser.me/api/portraits/women/32.jpg" class="avatar">
-                <div class="comment-body">
-                    <div class="name">Renata Pires</div>
-                    <div class="text">Alguém aqui já ganhou o sorteio de 100 reais? Entrei hoje e tô animada kkk</div>
-                    <div class="meta">Curtir · 2h</div>
+                <div style="flex: 1;">
+                    <div class="comment-content">
+                        <span class="name">Renata Pires</span>
+                        <p class="text">Alguém aqui já ganhou o sorteio de 100 reais? Entrei hoje e tô animada kkk</p>
+                    </div>
+                    <div class="meta"><span>Curtir</span> <span>Responder</span> 2h</div>
                 </div>
             </div>
 
             <div class="reply">
-                <div style="display: flex;">
-                    <img src="https://randomuser.me/api/portraits/women/52.jpg" class="avatar" style="width: 35px; height: 35px;">
-                    <div class="comment-body">
-                        <div class="name">Larissa Mello</div>
-                        <div class="text">Eu ganhei na sexta passada, Renata! O PIX caiu na hora. Ajuda demais a comprar as coisas da semana. Foca no suco de limão com gengibre que não tem erro!</div>
-                        <div class="meta">Curtir · 1h</div>
+                <img src="https://randomuser.me/api/portraits/women/52.jpg" class="avatar" style="width: 32px; height: 32px;">
+                <div style="flex: 1;">
+                    <div class="comment-content">
+                        <span class="name">Larissa Mello</span>
+                        <p class="text">Eu ganhei na sexta passada, Renata! O PIX caiu na hora. Ajuda demais a comprar as coisas da semana. Foca no suco de limão com gengibre que não tem erro!</p>
                     </div>
+                    <div class="meta"><span>Curtir</span> <span>Responder</span> 1h</div>
                 </div>
             </div>
 
             <div class="comment">
                 <img src="https://randomuser.me/api/portraits/women/65.jpg" class="avatar">
-                <div class="comment-body">
-                    <div class="name">Mariana Silveira</div>
-                    <div class="text">Gente, as vitaminas são TUDO! Eu não tinha tempo de cozinhar, mas em 5 min tá pronto. Já se foram 3kg em 4 dias. Chocada!</div>
-                    <div class="meta">Curtir · 45 min</div>
+                <div style="flex: 1;">
+                    <div class="comment-content">
+                        <span class="name">Mariana Silveira</span>
+                        <p class="text">Gente, as vitaminas são TUDO! Eu não tinha tempo de cozinhar, mas em 5 min tá pronto. Já se foram 3kg em 4 dias. Chocada!</p>
+                    </div>
+                    <div class="meta"><span>Curtir</span> <span>Responder</span> 45 min</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" class="avatar">
+                <div style="flex: 1;">
+                    <div class="comment-content">
+                        <span class="name">Carla Vasconcelos</span>
+                        <p class="text">Eu precisava secar pra ontem por causa do carnaval kkkk já perdi 2kg em 2 dias com o suco de 3 ingredientes. Recomendo muito!</p>
+                    </div>
+                    <div class="meta"><span>Curtir</span> <span>Responder</span> 30 min</div>
                 </div>
             </div>
 
             <div class="comment">
                 <img src="https://randomuser.me/api/portraits/women/81.jpg" class="avatar">
-                <div class="comment-body">
-                    <div class="name">Adriana Costa</div>
-                    <div class="text">Os jantares low carb são uma delícia, meu marido até começou a comer comigo kkkk. O melhor investimento que fiz esse mês, e a Nutri Carol é super atenciosa no grupo.</div>
-                    <div class="meta">Curtir · 15 min</div>
+                <div style="flex: 1;">
+                    <div class="comment-content">
+                        <span class="name">Adriana Costa</span>
+                        <p class="text">Os jantares low carb são uma delícia, meu marido até começou a comer comigo kkkk. O melhor investimento que fiz esse mês.</p>
+                    </div>
+                    <div class="meta"><span>Curtir</span> <span>Responder</span> 15 min</div>
                 </div>
             </div>
 
             <div class="comment">
-                <img src="https://randomuser.me/api/portraits/women/26.jpg" class="avatar">
-                <div class="comment-body">
-                    <div class="name">Patrícia L.</div>
-                    <div class="text">Acabei de comprar e já estou dentro do grupo do Zap! O material é bem organizado, as receitas de 3 ingredientes são muito fáceis.</div>
-                    <div class="meta">Curtir · Agora</div>
+                <img src="https://randomuser.me/api/portraits/women/22.jpg" class="avatar">
+                <div style="flex: 1;">
+                    <div class="comment-content">
+                        <span class="name">Juliana M. de Souza</span>
+                        <p class="text">Gente, comprem sem medo! O grupo no Zap é sensacional e a Carol tira todas as dúvidas. Minha barriga desinchou MUITO rápido.</p>
+                    </div>
+                    <div class="meta"><span>Curtir</span> <span>Responder</span> Agora</div>
                 </div>
             </div>
         </div>
 
-        <footer style="text-align: center; padding: 40px 10px; color: #444; font-size: 11px;">
+        <footer>
             <p>© 2026 Protocolo Carol Mendes - Todos os direitos reservados.</p>
         </footer>
     </div>
