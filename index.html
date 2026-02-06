@@ -19,45 +19,42 @@
     </script>
 
     <style>
-        /* ESTILO GERAL */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
         body { background-color: #050505; color: #ffffff; line-height: 1.6; }
-        .container { max-width: 500px; margin: 0 auto; padding: 20px; background: #0a0a0a; border-left: 1px solid #222; border-right: 1px solid #222; position: relative;}
+        .container { max-width: 500px; margin: 0 auto; padding: 20px; background: #0a0a0a; border-left: 1px solid #222; border-right: 1px solid #222; }
 
-        /* POP-UP PESSOAS VENDO */
+        /* POP-UP AJUSTADO (SEM TEXTO COLADO) */
         #viewing-now {
             position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
             background: rgba(0,0,0,0.9); color: white; padding: 10px 20px;
             border-radius: 50px; font-size: 13px; z-index: 10000;
             display: flex; align-items: center; border: 1px solid #00ff00;
-            width: 280px; box-shadow: 0 0 15px rgba(0,255,0,0.2);
+            width: fit-content; min-width: 250px; box-shadow: 0 0 15px rgba(0,255,0,0.2);
         }
         .dot { height: 8px; width: 8px; background-color: #00ff00; border-radius: 50%; display: inline-block; margin-right: 10px; animation: blink 1s infinite; }
         @keyframes blink { 0% {opacity: 1;} 50% {opacity: 0.3;} 100% {opacity: 1;} }
 
-        /* BARRA DE ALERTA */
         .alert-bar { background: #d60000; color: #fff; text-align: center; padding: 12px; font-weight: 800; font-size: 14px; text-transform: uppercase; animation: piscar 1s infinite alternate; }
         @keyframes piscar { 0% {background: #d60000;} 100% {background: #ff3333;} }
 
-        /* HEADLINE */
         .headline { font-size: 26px; font-weight: 900; color: #ffffff; text-align: center; margin: 25px 0; line-height: 1.2; text-transform: uppercase; }
         .highlight { color: #00ff00; background: rgba(0,255,0,0.1); padding: 2px 5px; border-radius: 4px;}
 
-        /* BOX WHATSAPP + SORTEIO */
-        .wa-box { background: #075E54; border-radius: 15px; padding: 20px; margin: 25px 0; border: 2px solid #25D366; text-align: center; }
-        .wa-box h3 { color: #fff; font-size: 18px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; gap: 8px; }
-        .wa-box p { font-size: 15px; color: #e0e0e0; }
-        .sorteio-badge { background: #ffcc00; color: #000; font-weight: 900; padding: 5px 10px; border-radius: 5px; margin-top: 10px; display: inline-block; font-size: 14px; }
+        /* NUTRICIONISTA TAG */
+        .nutri-tag { background: #e63946; color: white; padding: 10px; border-radius: 8px; margin: 15px 0; font-size: 14px; text-align: center; border: 1px solid #ff4d4d; }
 
-        /* OFERTA */
+        .wa-box { background: #075E54; border-radius: 15px; padding: 20px; margin: 20px 0; border: 2px solid #25D366; text-align: center; }
+        .sorteio-badge { background: #ffcc00; color: #000; font-weight: 900; padding: 5px 10px; border-radius: 5px; margin: 10px 0; display: inline-block; }
+
         .offer-box { background: linear-gradient(145deg, #1a1a1a, #000); border: 2px solid #333; padding: 30px 20px; text-align: center; border-radius: 20px; margin-top: 30px; }
         .price-new { font-size: 52px; font-weight: 900; color: #00ff00; margin: 5px 0; }
+        
         .btn-pulse { background: linear-gradient(to bottom, #00c900, #009600); color: white; padding: 22px 10px; font-size: 18px; font-weight: 900; text-decoration: none; border-radius: 12px; display: block; text-transform: uppercase; animation: pulse 1.2s infinite; border-bottom: 4px solid #006400; }
         @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.03); } 100% { transform: scale(1); } }
 
-        /* COMENTÁRIOS */
         .comments-section { background: #fff; color: #222; padding: 20px; margin-top: 40px; border-radius: 12px; }
-        .comment { display: flex; margin-bottom: 20px; border-bottom: 1px solid #f0f2f5; padding-bottom: 15px; }
+        .comment { display: flex; margin-bottom: 20px; padding-bottom: 10px; }
+        .reply { margin-left: 55px; margin-top: -10px; border-left: 2px solid #ddd; padding-left: 15px; margin-bottom: 20px; }
         .avatar { width: 45px; height: 45px; border-radius: 50%; margin-right: 12px; background: #eee; }
         .comment-body { flex: 1; }
         .name { font-weight: bold; color: #385898; font-size: 14px; }
@@ -71,95 +68,88 @@
 
     <div id="viewing-now">
         <span class="dot"></span>
-        <span id="viewer-count">48</span> pessoas vendo essa oferta agora
+        <span id="viewer-count">42</span> &nbsp;pessoas vendo essa oferta agora
     </div>
 
     <div class="alert-bar">
-        ⚠️ ÚLTIMAS VAGAS: Protocolo -10kg em 15 dias ou R$ 19,90 de volta!
+        ⚠️ AGRESSIVO: -10KG EM 15 DIAS OU R$ 19,90 DE VOLTA!
     </div>
 
     <div class="container">
         
         <h1 class="headline">
-            ELIMINE ATÉ <span class="highlight">10KG EM 15 DIAS</span> OU PEÇA SEU DINHEIRO DE VOLTA!
+            O MÉTODO DE <span class="highlight">3 INGREDIENTES</span> QUE SECA A BARRIGA EM 10 MINUTOS POR DIA!
         </h1>
 
-        <img src="https://i.ibb.co/vzPRY8P/detox-results.png" alt="Detox" class="hero-img">
+        <img src="suco.png" alt="Protocolo Detox" class="hero-img">
 
-        <p style="text-align: center; font-size: 18px; margin-bottom: 20px;">
-            A estratégia de baixo custo para quem precisa de <strong>resultados urgentes</strong>.
+        <p style="text-align: left; font-size: 18px; margin-bottom: 20px; color: #ddd;">
+            Nada de dietas caras. Use apenas <strong>3 ingredientes simples</strong> que você já tem na fruteira da sua cozinha. O preparo leva menos de 10 minutos e o resultado começa em 24h.
         </p>
 
+        <div class="nutri-tag">
+            👩‍⚕️ <b>PRESENTE:</b> 1 Consulta Online (Coletiva) a cada 15 dias com a <b>Nutricionista Carol Mendes</b> para tirar dúvidas!
+        </div>
+
         <div class="wa-box">
-            <h3>🟢 GRUPO VIP DAS ALUNAS</h3>
-            <p>Ao entrar hoje, você garante vaga no nosso grupo secreto de motivação e receitas diárias.</p>
-            <div class="sorteio-badge">💰 SORTEIO DE R$ 100,00 TODA SEXTA</div>
-            <p style="font-size: 12px; margin-top: 8px; color: #fff;">(Prêmio para quem bater a meta de ingredientes da semana!)</p>
+            <h3>🟢 GRUPO VIP + SORTEIO</h3>
+            <div class="sorteio-badge">💰 R$ 100,00 TODA SEMANA</div>
+            <p>Sorteio via PIX para as alunas que baterem a meta da semana para ajudar na feira!</p>
         </div>
 
         <div class="offer-box">
-            <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 10px;">PROMOÇÃO VÁLIDA POR POUCAS HORAS</p>
-            <p style="text-decoration: line-through; color: #888;">De R$ 97,00 por apenas:</p>
+            <p style="text-decoration: line-through; color: #888; font-size: 16px;">De R$ 97,00 por apenas:</p>
             <p class="price-new">R$ 19,90</p>
             <a href="https://pay.kirvano.com/23af3173-bce4-42f3-9d4d-75d2ce5bd983" class="btn-pulse">
-                QUERO MEU ACESSO E ENTRAR NO GRUPO ➤
+                QUERO DESINCHAR AGORA ➤
             </a>
-            <p style="font-size: 13px; color: #888; margin-top: 15px;">Acesso vitalício + Garantia Incondicional</p>
+            <p style="font-size: 12px; color: #666; margin-top: 15px;">Acesso imediato à Nutri Carol Mendes e ao Grupo.</p>
         </div>
 
         <div class="comments-section">
-            <p style="font-weight: bold; margin-bottom: 15px; color: #444; border-bottom: 1px solid #eee; padding-bottom: 5px;">Comentários (347)</p>
+            <p style="font-weight: bold; margin-bottom: 15px; color: #444; border-bottom: 1px solid #eee;">Depoimentos das Alunas</p>
 
             <div class="comment">
-                <img src="https://randomuser.me/api/portraits/women/11.jpg" class="avatar">
-                <div class="comment-body">
-                    <div class="name">Carla Vasconcelos</div>
-                    <div class="text">Gente, funciona mto! Perdi 4kg na primeira semana e o grupo do zap é maravilhoso, as meninas se ajudam mto e os sorteios são reais, minha amiga ganhou semana passada! 😍</div>
-                    <div class="meta">Curtir · 12 min</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <img src="https://randomuser.me/api/portraits/women/22.jpg" class="avatar">
-                <div class="comment-body">
-                    <div class="name">Beatriz Souza</div>
-                    <div class="text">Comprei pelo sorteio dos 100 reais kkkk mas me surpreendi com as receitas, são baratas mesmo. Já se foram 6kg em 10 dias. Foco total!</div>
-                    <div class="meta">Curtir · 24 min</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <img src="https://randomuser.me/api/portraits/women/44.jpg" class="avatar">
-                <div class="comment-body">
-                    <div class="name">Fernanda Lima</div>
-                    <div class="text">O melhor é que não passa fome. Aquela vitamina da manhã tira toda a vontade de doce. Recomendo dms meninas.</div>
-                    <div class="meta">Curtir · 1h</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <img src="https://randomuser.me/api/portraits/women/65.jpg" class="avatar">
+                <img src="https://randomuser.me/api/portraits/women/32.jpg" class="avatar">
                 <div class="comment-body">
                     <div class="name">Renata Pires</div>
-                    <div class="text">Alguém já ganhou o sorteio de ingredientes? Entrei hj!</div>
+                    <div class="text">Alguém aqui já ganhou o sorteio de 100 reais? Entrei hoje e tô animada kkk</div>
                     <div class="meta">Curtir · 2h</div>
+                </div>
+            </div>
+
+            <div class="reply">
+                <div style="display: flex;">
+                    <img src="https://randomuser.me/api/portraits/women/52.jpg" class="avatar" style="width: 35px; height: 35px;">
+                    <div class="comment-body">
+                        <div class="name">Larissa Mello</div>
+                        <div class="text">Eu ganhei na sexta passada, Renata! O PIX caiu na hora. Ajuda demais a comprar as coisas da semana. Foca no suco de limão com gengibre que não tem erro!</div>
+                        <div class="meta">Curtir · 1h</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" class="avatar">
+                <div class="comment-body">
+                    <div class="name">Camila Antunes</div>
+                    <div class="text">Gente, a Carol Mendes é maravilhosa. A live com ela ontem tirou todas as minhas dúvidas sobre o que comer no jantar. Melhor 20 reais que já gastei.</div>
+                    <div class="meta">Curtir · 3h</div>
                 </div>
             </div>
         </div>
 
         <footer style="text-align: center; padding: 40px 10px; color: #444; font-size: 11px;">
-            <p>© 2026 Low Ticket Detox - Todos os direitos reservados.</p>
-            <p style="margin-top: 10px;">Este site não tem vínculo com o Facebook. Resultados variam de pessoa para pessoa.</p>
+            <p>© 2026 Protocolo Carol Mendes - Todos os direitos reservados.</p>
         </footer>
     </div>
 
     <script>
-        // Lógica do contador de pessoas vendo
         function updateViewers() {
-            const count = Math.floor(Math.random() * (57 - 32 + 1)) + 32;
+            const count = Math.floor(Math.random() * (60 - 30 + 1)) + 30;
             document.getElementById('viewer-count').innerText = count;
         }
-        setInterval(updateViewers, 7000);
+        setInterval(updateViewers, 5000);
     </script>
 
 </body>
