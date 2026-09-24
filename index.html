@@ -10,8 +10,9 @@
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init','833950889336655');
 fbq('track','PageView');
+fbq('track','ViewContent');
 </script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1149941309916052&ev=PageView&noscript=1"/></noscript>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=833950889336655&ev=PageView&noscript=1"/></noscript>
 <!-- End Meta Pixel Code -->
 <style>
   :root{
@@ -48,6 +49,7 @@ fbq('track','PageView');
     text-align:center;
   }
   .btn:hover{transform:translateY(-2px);box-shadow:0 16px 30px rgba(232,86,42,.45)}
+  .btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
   .btn-lg{font-size:20px;padding:20px 36px}
   .pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:14px;font-weight:600;color:var(--muted);box-shadow:0 2px 8px rgba(0,0,0,.04)}
   .section{padding:64px 0}
@@ -169,6 +171,10 @@ fbq('track','PageView');
     .btn{width:100%}
     .hero-cta{align-items:stretch}
   }
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .btn{transition:none}
+  }
 </style>
 </head>
 <body>
@@ -189,7 +195,7 @@ fbq('track','PageView');
       </div>
       <div class="hero-col">
         <div class="hero-img">
-          <img src="8.jpeg" alt="Mulher em forma após o Método 7 Dias" />
+          <img src="8.jpeg" alt="Mulher em forma após o Método 7 Dias" fetchpriority="high" />
           <div class="float-stat"><b>+680</b><span>mulheres aprovaram</span></div>
         </div>
       </div>
@@ -219,7 +225,7 @@ fbq('track','PageView');
       <p class="muted" style="max-width:680px;margin:0 auto">Não é montagem, não é filtro. São mulheres reais que seguiram o Método 7 Dias à risca e viram a barriga secar em até uma semana.</p>
       <div class="cards3">
         <div class="result-card">
-          <img src="patricia.webp" alt="Antes e depois - Juliana" />
+          <img src="patricia.webp" alt="Antes e depois - Juliana" loading="lazy" />
           <div class="rc-body">
             <span class="result-tag">-4,0 kg em 7 dias</span>
             <blockquote>“Minha barriga desinchou já no 3º dia. Não acreditei quando subi na balança.”</blockquote>
@@ -227,7 +233,7 @@ fbq('track','PageView');
           </div>
         </div>
         <div class="result-card">
-          <img src="mm.jfif" alt="Antes e depois - Márcia" />
+          <img src="mm.jfif" alt="Antes e depois - Márcia" loading="lazy" />
           <div class="rc-body">
             <span class="result-tag">-4,8 kg em 7 dias</span>
             <blockquote>“Voltei a fechar o zíper da calça que não usava há 2 anos. Chorei de emoção.”</blockquote>
@@ -235,7 +241,7 @@ fbq('track','PageView');
           </div>
         </div>
         <div class="result-card">
-          <img src="dep3.webp" alt="Antes e depois - Beatriz" />
+          <img src="dep3.webp" alt="Antes e depois - Beatriz" loading="lazy" />
           <div class="rc-body">
             <span class="result-tag">-5,0 kg em 7 dias</span>
             <blockquote>“A cintura afinou de verdade. Todo mundo perguntou o que eu tinha feito.”</blockquote>
@@ -273,19 +279,19 @@ fbq('track','PageView');
       <div class="testi-grid" style="text-align:left">
         <div class="testi">
           <p>“O que eu mais gostei é que não precisa passar fome nem comer coisa cara. Perdi quase 4 kg nesses 7 dias e quero continuar firme, meu rosto desinchou de uma forma surpreendente.”</p>
-          <div class="who"><img src="avatar2.jfif" alt="Juliana Prado" /><span><b>Juliana Prado</b><span>perdeu 4kg em 7 dias</span></span></div>
+          <div class="who"><img src="avatar2.jfif" alt="Juliana Prado" loading="lazy" /><span><b>Juliana Prado</b><span>perdeu 4kg em 7 dias</span></span></div>
         </div>
         <div class="testi">
           <p>“Sou mãe de 3, achei que não teria tempo. É tão simples que segui mesmo na correria. Em uma semana desinchei a barriga toda e voltei a me olhar no espelho com orgulho.”</p>
-          <div class="who"><img src="avatar1.jpeg" alt="Márcia Oliveira" /><span><b>Márcia Oliveira</b><span>-4,8kg e barriga seca</span></span></div>
+          <div class="who"><img src="avatar1.jpeg" alt="Márcia Oliveira" loading="lazy" /><span><b>Márcia Oliveira</b><span>-4,8kg e barriga seca</span></span></div>
         </div>
         <div class="testi">
           <p>“O choque metabólico é real. Já no 2º dia parei de estufar depois das refeições. Minha cintura afinou tanto que todo mundo no trabalho perguntou o que eu fiz.❤️”</p>
-          <div class="who"><img src="avatar3.jfif" alt="Beatriz Lima" /><span><b>Beatriz Lima</b><span>cintura afinou em 6 dias</span></span></div>
+          <div class="who"><img src="avatar3.jfif" alt="Beatriz Lima" loading="lazy" /><span><b>Beatriz Lima</b><span>cintura afinou em 6 dias</span></span></div>
         </div>
         <div class="testi">
           <p>“Achei que na minha idade e com meu metabolismo lento seria impossível. Perdi 5kg, voltei para 2 dígitos, ganhei disposição e minha autoestima voltou. Só me arrependo de não ter começado antes.”</p>
-          <div class="who"><img src="avatar4.jfif" alt="Sônia Ribeiro" /><span><b>Sônia Ribeiro</b><span>-5kg aos 52 anos</span></span></div>
+          <div class="who"><img src="avatar4.jfif" alt="Sônia Ribeiro" loading="lazy" /><span><b>Sônia Ribeiro</b><span>-5kg aos 52 anos</span></span></div>
         </div>
       </div>
     </div>
@@ -349,7 +355,7 @@ fbq('track','PageView');
       <div class="price-card">
         <div class="price-top">OFERTA ESPECIAL — 🔥72% OFF</div>
         <div class="price-body">
-          <img class="cover" src="capaprod.jpeg" alt="Capa do e-book Método 7 Dias" />
+          <img class="cover" src="capaprod.jpeg" alt="Capa do e-book Método 7 Dias" loading="lazy" />
           <ul class="incl">
             <li><span class="c">✔</span> Acesso completo ao Método 7 Dias</li>
             <li><span class="c">✔</span> Protocolo Pele Firme (bônus)</li>
@@ -417,15 +423,23 @@ fbq('track','PageView');
     <p class="disc">Os resultados podem variar de pessoa para pessoa.</p>
     <p class="copy">© 2026 Método 7 Dias. Todos os direitos reservados.</p>
   </footer>
-  <!-- InitiateCheckout nos CTAs -->
+  <!-- CTAs: AddToCart no clique + repasse de UTMs/fbclid para o checkout -->
   <script>
     (function(){
+      var qs = window.location.search;
       function bind(){
         document.querySelectorAll('[data-cta="comprar"]').forEach(function(el){
-          if(el.__icBound) return;
-          el.__icBound = true;
+          if(el.__ctaBound) return;
+          el.__ctaBound = true;
+          if (qs) {
+            try {
+              var u = new URL(el.href);
+              new URLSearchParams(qs).forEach(function(v,k){ u.searchParams.set(k,v); });
+              el.href = u.toString();
+            } catch(e) {}
+          }
           el.addEventListener('click', function(){
-            if (typeof fbq === 'function') { fbq('track','InitiateCheckout'); }
+            try { if (typeof fbq === 'function') { fbq('track','AddToCart'); } } catch(e) {}
           });
         });
       }
